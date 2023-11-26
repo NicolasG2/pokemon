@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    width: 550px;
+    background-color: #cfebfd;
+    border: 2px solid #3a5da8;
+    border-radius: 15px;
+}
+
+.form-floating {
+    /* Adicione estilos específicos para o campo flutuante, se necessário */
+}
+
+.form-check {
+    /* Adicione estilos específicos para a seção de gênero, se necessário */
+}
+
+.label_img {
+    width: 50px;
+    height: 50px;
+}
