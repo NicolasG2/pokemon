@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+
+@font-face {
+    font-family: Pokemon;
+    src: url(../font/Pokemon\ Solid.ttf);
+}
+
+body {
+    background-color: white;
+}
+
+.navbar {
+    background-color: #d21404!important;
+}
+
+.navbar span{
+    color: #89cfef !important;
+}
+
+.adm{
+    color: #cfebfd !important;
+}
+
+#itens ul li span {
+    color: #623390 !important;
+}
+
+#itens ul li .adm {
+    color: #cfebfd !important;
+}
+
+
+#itens a {
+    color: #cfebfd !important;
+}
+
+.menu {
+    font-family: Pokemon;
+    color: #ffcb05;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #3a5da8;
+}
+
+.add {
+    background-color: #2e4890 !important;
+}
+
+.btn_create {
+    background-color: #cfebfd;
+}
