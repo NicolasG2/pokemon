@@ -1,0 +1,2 @@
+                                @if(isset($permissions['pokemon.edit']) && $permissions['pokemon.edit'])
+                                @if(isset($permissions['pokemon.destroy']) && $permissions['pokemon.destroy'])
