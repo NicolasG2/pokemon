@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    width: 550px;
+    background-color: rgb(238, 228, 156);
+    border: 2px solid rgb(235, 102, 53);
+    border-radius: 15px;
+}
+
+.label_img {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-confirm {
+    background-color: #95d7e2;
+    color: aliceblue;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.btn-confirm:hover {
+    background-color: #3e75db;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn-voltar {
+    background-color: #e9a245;
+    color: aliceblue;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.btn-voltar:hover {
+    background-color: #f58e08;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn-foto {
+    background-color: #95d7e2;
+    border: 1px solid gray;
+}
+
+.selecionar-foto {
+    border: 1px solid gray;
+}
