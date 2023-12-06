@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+
+@font-face {
+    font-family: Pokemon;
+    src: url(../font/Pokemon\ Solid.ttf);
+}
+
+.tabela-pokemons caption {
+    font-family: Pokemon;
+    font-size: 30px;
+    color: #ffcb05;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #3a5da8;
+    text-align: center;
+}
+
+.container {
+    width: 1200px;
+    margin-bottom: 30px;;
+}
+
+.tabela-pokemons th {
+    background-color: rgb(101, 165, 115);
+    color:white;
+    border-color: 2px solid rgb(47, 100, 4);
+}
+
+.tabela-pokemons tr td {
+    background-color: rgb(156, 214, 169);
+    color:white;
+}
+
+.tabela-pokemons {
+    border: 2px solid rgb(35, 66, 9);
+    border-radius: 7px;
+}
+
+.btn-edit {
+    background-color: rgb(61, 180, 174);
+    border: 1px solid white;
+}
+
+.btn-edit:hover {
+    background-color: #62e273;
+ }
+
+.btn-delete {
+    border: 1px solid white;
+}
+
+.camera {
+    fill: rgb(48, 133, 128);
+}
+.camera:hover {
+    fill: rgb(103, 228, 221);
+}

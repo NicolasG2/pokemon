@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 580px;
+    height: 680px;
+    background-color: rgb(156, 214, 169);
+    border: 2px solid rgb(47, 100, 4);
+    border-radius: 15px;
+}
+
+.btn-confirm {
+    background-color: rgb(61, 180, 174);
+    color: black;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.btn-confirm:hover {
+    background-color: rgb(45, 104, 101);
+    color: white;
+    border: 2px solid rgb(255, 254, 254);
+    border-radius: 5px;
+}
+
+.btn-voltar {
+    background-color: rgb(72, 221, 226);
+    color: black;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.btn-voltar:hover {
+    background-color: rgb(59, 137, 143);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.btn-foto {
+    background-color: black;
+    border: 1px solid gray;
+}
+
+.selecionar-foto {
+    border: 1px solid gray;
+}

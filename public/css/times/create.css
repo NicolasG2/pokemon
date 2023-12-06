@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 580px;
+    height: 860px;
+    background-color: rgb(171, 115, 236);
+    border: 2px solid rgb(29, 73, 218);
+    color: white;
+    border-radius: 15px;
+}
+
+.btn-confirm {
+    background-color: rgb(39, 110, 22);
+    color: aliceblue;
+    border: 2px solid rgb(255, 254, 254);
+    border-radius: 5px;
+}
+
+.btn-confirm:hover {
+    background-color: #62e273;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn-voltar {
+    background-color: #be24b7;
+    color: aliceblue;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.btn-voltar:hover {
+    background-color: #df68cb;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn-foto {
+    background-color: #95d7e2;
+    border: 1px solid gray;
+}
+
+.selecionar-foto {
+    border: 1px solid gray;
+}
