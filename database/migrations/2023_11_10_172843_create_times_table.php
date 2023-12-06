@@ -17,8 +17,8 @@ class CreateTimesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_timePokemon');
             $table->foreign('id_timePokemon')->references('id')->on('timePokemons');
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('id_treinador');
+            $table->foreign('id_treinador')->references('id')->on('treinadors');
             $table->softDeletes();
             $table->timestamps();
         });

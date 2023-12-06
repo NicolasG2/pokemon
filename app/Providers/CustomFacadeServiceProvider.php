@@ -14,9 +14,6 @@ class CustomFacadeServiceProvider extends ServiceProvider
      */
     public function register() {
 
-        $this->app->bind('userpermissions',function(){
-            return new UserPermissions();
-        });
     }
 
     /**

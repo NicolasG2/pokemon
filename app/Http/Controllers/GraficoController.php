@@ -19,6 +19,7 @@ class GraficoController extends Controller
         foreach ($poks as $pok) {
 
             $obj = Tipo::find($pok->tipo1);
+            
 
             if(isset($obj)) {
                 $data[$cont]['tipo1'] = $obj->nome;
@@ -26,8 +27,11 @@ class GraficoController extends Controller
 
             $obj = Tipo::find($pok->tipo2);
 
+
             if(isset($obj)) {
                 $data[$cont]['tipo2'] = $obj->nome;
+            } else {
+                $data[$cont]['tipo2'] = null;
             }
 
             $cont++;
@@ -37,7 +41,7 @@ class GraficoController extends Controller
         $total_tipos1[0] = ['Tipos', 'Qtde de Tipos'];
         $cont = 1;
 
-        foreach (array_count_values(array_filter(array_column($data, 'tipo'))) as $key => $value) {
+        foreach (array_count_values(array_filter(array_column($data, 'tipo1'))) as $key => $value) {
             $total_tipos1[$cont] = [$key, $value];
             $cont++;
         }
@@ -48,7 +52,7 @@ class GraficoController extends Controller
         $total_tipos2[0] = ['Tipos', 'Qtde de Tipos'];
         $cont = 1;
 
-        foreach (array_count_values(array_filter(array_column($data, 'tipo'))) as $key => $value) {
+        foreach (array_count_values(array_filter(array_column($data, 'tipo2'))) as $key => $value) {
             $total_tipos2[$cont] = [$key, $value];
             $cont++;
         }

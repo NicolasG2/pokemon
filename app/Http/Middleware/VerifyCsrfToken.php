@@ -15,6 +15,7 @@ class VerifyCsrfToken extends Middleware
         'combates/add',
         'pokemons/add',
         'times/add',
+        'tipos/add',
         'treinadors/add',
         'professors/add',
         'timePokemons/add'

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tipo;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TipoController extends Controller
 {
@@ -111,7 +112,7 @@ class TipoController extends Controller
             $reg->nome = $request->nome;
             $reg->descricao = $request->descricao;
             
-            unlink(storage_path("app/public/" . $reg->foto));
+            Storage::delete("public/{$reg->foto}");
 
             $extensao_arq = $request->file('foto')->getClientOriginalExtension();
             $nome_arq = $id.'_'.time().'.'.$extensao_arq;
@@ -132,7 +133,7 @@ class TipoController extends Controller
 
         $reg = Tipo::find($id);
 
-        unlink(storage_path("app/public/" . $reg->foto));
+        Storage::delete("public/{$reg->foto}");
 
         if(!isset($reg)) { return "<h1>ID: $id não encontrado!"; }
 

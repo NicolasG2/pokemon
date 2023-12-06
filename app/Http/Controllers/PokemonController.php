@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pokemon;
 use Illuminate\Http\Request;
 use App\Models\Tipo;
+use Illuminate\Support\Facades\Storage;
 
 class PokemonController extends Controller
 {
@@ -116,6 +117,7 @@ class PokemonController extends Controller
 
     public function update(Request $request, $id)
     {        
+
         $this->authorize('professor', Pokemon::class);
 
         $regras = [
@@ -147,7 +149,7 @@ class PokemonController extends Controller
                 $reg->tipo2 = null;
             }
 
-            unlink(storage_path("app/public/" . $reg->foto));
+            Storage::delete("public/{$reg->foto}");
 
             $extensao_arq = $request->file('foto')->getClientOriginalExtension();
             $nome_arq = $id.'_'.time().'.'.$extensao_arq;
@@ -171,7 +173,7 @@ class PokemonController extends Controller
 
         if(!isset($reg)) { return "<h1>ID: $id não encontrado!"; }
 
-        unlink(storage_path('app/public/'.$reg->foto));
+        Storage::delete("public/{$reg->foto}");
 
         $reg->delete();
 
