@@ -7,8 +7,8 @@
 
     <div class="row">
         <div class="col">
-            <table class="tabela_tipo table align-middle caption-top table-striped">
-                <caption>Tabela de <b>Tipos</b></caption>
+            <table class="tabela-tipo table align-middle caption-top table-striped">
+                <caption>Tabela de Tipos</caption>
                 <thead>
                     <tr>
                         <th scope="col" class="d-none d-md-table-cell">ID</th>

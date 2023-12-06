@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="{{asset('css/atividade.css')}}">
 
-<div class="row mb-3 d-flex justify-content-around">
+<div class="d-flex justify-content-around flex-wrap mt-3 mb-3">
     @foreach ($data as $item)
         <div class="card mb-4" style="width: 18rem;">
             @if($item->genero == 0)<img class="label_img" src="{{ asset('img/brendan.png') }}">@endif

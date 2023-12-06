@@ -4,7 +4,7 @@
 
 @section('conteudo')
 
-<link rel="stylesheet" href="{{asset('css/create.css')}}">
+<link rel="stylesheet" href="{{asset('css/times/create.css')}}">
 
 <form action="{{ route('time.store') }}" method="POST" enctype="multipart/form-data">
     @csrf 

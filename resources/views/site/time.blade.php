@@ -15,11 +15,11 @@
                         </button>
                     </h2>
                     <div id="flush_{{$item['id']}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $item['id'] }}" data-bs-parent="#accordionFlushExample">
-                        <div class="row justify-content-around">
+                        <div class="d-flex justify-content-around flex-wrap mt-3">
                             @for ($i = 1; $i <= 6; $i++)
                                 @if ($pokemonData = $item["pokemon{$i}"])
                                     <div class="card mb-4" style="width: 18rem; display: none;">   
-                                        <img src="{{ asset('storage/' . $pokemonData['foto']) }}" height="180px" nohref style="cursor:pointer" onclick="showFotoModal('{{ asset('storage/' . $pokemonData['foto']) }}')"> 
+                                    <img src="{{ asset('storage/' . $pokemonData['foto']) }}" height="180px" <a nohref style="cursor:pointer" onclick="showFotoModal('{{ asset('storage/') }}', '{{ $pokemonData['foto'] }}')">
                                         <div class="card-body">
                                             <p class="nome fs-4 fw-bold">{{ $pokemonData['nome'] }}</p>
                                             <p class="descricao fs-6">{{ $pokemonData['descricao'] }}</p>

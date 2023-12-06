@@ -10,7 +10,7 @@
     <div class="col">
         <div class="container">
             <table class="tabela_treinador table align-middle caption-top table-striped">
-                <caption>Tabela de <b>Treinadores</b></caption>
+                <caption>Tabela de Treinadores</caption>
                 <thead>
                     <tr>
                         <th scope="col" class="d-none d-md-table-cell">ID</th>
@@ -34,7 +34,7 @@
                         @endif
                         <td>{{ $item->regiao }}</td>
                         <td>
-                            <a href="{{ route('treinador.edit', $item->id) }}" class="btn btn-success">
+                            <a href="{{ route('treinador.edit', $item->id) }}" class="btn-voltar btn btn-success">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF"
                                     class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -45,7 +45,7 @@
                             </a>
                             <a nohref style="cursor:pointer"
                                 onclick="showRemoveModal('{{ $item->id }}', '{{ $item->nome }}')"
-                                class="delete btn btn-danger">
+                                class="btn-delete btn btn-danger">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF"
                                     class="bi bi-trash-fill" viewBox="0 0 16 16">
                                     <path

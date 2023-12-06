@@ -4,10 +4,10 @@
 
 @section('conteudo')
 
-<div class="row mb-3 d-flex justify-content-around">
+<div class="d-flex justify-content-around flex-wrap mt-3 mb-3">
     @foreach ($data as $item)
         <div class="card mb-4" style="width: 18rem;">
-            <img src="{{ asset('storage/' . $item['foto']) }}" height="180px" nohref style="cursor:pointer" onclick="showFotoModal('{{ asset('storage/' . $item['foto']) }}')">
+            <img src="{{ asset('storage/' . $item['foto']) }}" height="180px" <a nohref style="cursor:pointer" onclick="showFotoModal('{{ asset('storage/') }}', '{{ $item['foto'] }}')">
             <div class="card-body">
                 <p class="nome fs-4 fw-bold">{{ $item['nome'] }}</p>
                 <p class="descricao fs-6">{{ $item['descricao'] }}</p>

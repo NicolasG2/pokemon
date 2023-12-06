@@ -4,12 +4,12 @@
 
 @section('conteudo')
 
-<link rel="stylesheet" href="{{asset('css/index.css')}}">
+<link rel="stylesheet" href="{{asset('../css/times/index.css')}}">
 
 <div class="row">
     <div class="col">
-        <table class="table align-middle caption-top table-striped">
-            <caption>Tabela de <b>Times</b></caption>
+        <table class="tabela-times table align-middle caption-top table-striped">
+            <caption>Tabela de Times</caption>
             <thead>
                 <tr>
                     <th scope="col" class="d-none d-md-table-cell">TREINADOR</th>
@@ -33,7 +33,7 @@
                         <td>{{ $item['pokemon5'] }}</td>
                         <td>{{ $item['pokemon6'] }}</td>
                         <td>
-                            <a href="{{ route('time.edit', $item['id']) }}" class="btn btn-success">
+                            <a href="{{ route('time.edit', $item['id']) }}" class="btn-edit btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF"
                                     class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

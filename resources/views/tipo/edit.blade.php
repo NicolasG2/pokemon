@@ -1,5 +1,5 @@
 <!-- Herda o layout padrão definido no template "main" -->
-@extends('template.main', ['menu' => 'admin', 'submenu' => 'Alterar Tipo', 'rota' => 'tipo.create'])
+@extends('template.main', ['menu' => 'admin', 'submenu' => 'Alterar Tipo'])
 
 <!-- Preenche o conteúdo da seção "titulo" -->
 @section('titulo') Tipos @endsection
