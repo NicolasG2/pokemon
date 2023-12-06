@@ -47,9 +47,9 @@
                     </a>
                 @endif
 
-                <x-button class="ml-4" action="{{ route('register') }}">
+                <a class="ml-4 underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
                     Register
-                </x-button>
+                </a>
 
                 <x-button class="ml-3">
                     {{ __('Log in') }}

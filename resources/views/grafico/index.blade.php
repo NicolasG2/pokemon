@@ -3,12 +3,13 @@
 @section('conteudo')
 
 <div class="row">
-    <div class="col overflow-auto" id="tabela" style="width: 640px; height: 480px;">
+    <div class="col overflow-auto" id="tabela" style="width: 640px; height: 940px;">
         <table class="table align-middle caption-top table-striped">
             <caption>Tipos Cadastrados</caption>
             <thead>
                 <tr>
                     <th scope="col" class="d-none d-md-table-cell">TIPOS</th>
+                    <th scope="col" class="d-none d-md-table-cell"></th>
                 </tr>
             </thead>
             <tbody>
@@ -21,8 +22,10 @@
             </tbody>
         </table>
     </div>
-    <div class="col text-center" id="pizza" style="width: 640px; height: 480px;"></div>
-    <div class="col text-center" id="pizza" style="width: 640px; height: 480px;"></div>
+    <div class="col">
+        <div class="col text-center" id="pizza1" style="width: 640px; height: 660px;"></div>
+        <div class="col text-center" id="pizza2" style="width: 640px; height: 660px;"></div>
+    </div>
 </div>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -39,12 +42,12 @@
         data = google.visualization.arrayToDataTable(tipos1);
 
         options = {
-            title: 'TIPOS 1 DE POKÉMONS',
+            title: 'TIPOS PRIMÁRIOS DE POKÉMONS',
             is3D: true
         };
 
         // DESENHA GRÁFICO DE PIZZA 
-        chart = new google.visualization.PieChart(document.getElementById('pizza'));
+        chart = new google.visualization.PieChart(document.getElementById('pizza1'));
         chart.draw(data, options);
     }
 </script>
@@ -61,12 +64,12 @@
         data = google.visualization.arrayToDataTable(tipos2);
 
         options = {
-            title: 'TIPOS 2 DE POKÉMONS',
+            title: 'TIPOS SECUNDÁRIOS DE POKÉMONS',
             is3D: true
         };
 
         // DESENHA GRÁFICO DE PIZZA 
-        chart = new google.visualization.PieChart(document.getElementById('pizza'));
+        chart = new google.visualization.PieChart(document.getElementById('pizza2'));
         chart.draw(data, options);
     }
 </script>

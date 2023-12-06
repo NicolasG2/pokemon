@@ -9,18 +9,26 @@
         <div class="accordion accordion-flush" id="accordionFlushExample">
             @foreach ($data as $item)
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush_{{$item->id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <h2 class="accordion-header" id="flush-heading{{ $item['id'] }}">
+                        <button class="accordion-button collapsed border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush_{{$item['id']}}" aria-expanded="false" aria-controls="flush-collapseOne">
                             <span class="fs-5">{{ $item['nome_treinador'] }}</span>
                         </button>
                     </h2>
-                    <div id="flush_{{$item->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="background-exp accordion-body border border-white">
-                            <div class="row">
-                                <div class="col-md-10 col-xs-12 d-flex align-items-center justify-content-center">
-                                    <p class="fs-6">{{ $item->pokemon1 }}</span>
-                                </div>
-                            </div>
+                    <div id="flush_{{$item['id']}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{ $item['id'] }}" data-bs-parent="#accordionFlushExample">
+                        <div class="row justify-content-around">
+                            @for ($i = 1; $i <= 6; $i++)
+                                @if ($pokemonData = $item["pokemon{$i}"])
+                                    <div class="card mb-4" style="width: 18rem; display: none;">   
+                                        <img src="{{ asset('storage/' . $pokemonData['foto']) }}" height="180px" nohref style="cursor:pointer" onclick="showFotoModal('{{ asset('storage/' . $pokemonData['foto']) }}')"> 
+                                        <div class="card-body">
+                                            <p class="nome fs-4 fw-bold">{{ $pokemonData['nome'] }}</p>
+                                            <p class="descricao fs-6">{{ $pokemonData['descricao'] }}</p>
+                                            <p class="tipo1 fs-6">{{ $pokemonData['tipo1'] }}</p>
+                                            <p class="tipo2 fs-6">{{ $pokemonData['tipo2'] }}</p>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endfor
                         </div>
                     </div>
                 </div>
@@ -28,5 +36,21 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var accordions = document.querySelectorAll('.accordion-item');
+
+        accordions.forEach(function (accordion) {
+            accordion.addEventListener('click', function () {
+                var cards = this.querySelector('.accordion-collapse').querySelectorAll('.card');
+
+                cards.forEach(function (card) {
+                    card.style.display = card.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    });
+</script>
 
 @endsection

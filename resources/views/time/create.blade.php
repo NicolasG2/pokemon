@@ -10,12 +10,24 @@
     @csrf 
     <div class="row">
         <div class="col">
-            <label for="id_user">Treinador do time</label>
+            <label for="id_treinador">Treinador do time</label>
             <div class="form mb-3">
-                <input type="hidden" name="id_user" value="{{ auth()->user()->id }}">
+                <select class="form-control @if($errors->has('id_treinador')) is-invalid @endif" name="id_treinador" placeholder="Treinador do time">{{old('id_treinador')}}
+                    <option value="">Selecione um treinador</option>
+
+                    @foreach($treinadores as $t)
+                        <option value="{{ $t->id }}">{{ $t->nome }}</option>
+                    @endforeach
+                    
+                </select>
+                @if($errors->has('id_treinador'))
+                    <div class='invalid-feedback'>
+                        {{ $errors->first('id_treinador') }}
+                    </div>
+                @endif
             </div>
         </div>
-    </div> 
+    </div>
     <div class="row">
         <div class="col">
             <label for="pokemon1">Pokémon 1</label>
