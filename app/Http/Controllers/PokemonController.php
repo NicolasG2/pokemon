@@ -149,7 +149,7 @@ class PokemonController extends Controller
                 $reg->tipo2 = null;
             }
 
-            Storage::delete("public/{$reg->foto}");
+            Storage::delete("public/fotos/pokemons/{$reg->foto}");
 
             $extensao_arq = $request->file('foto')->getClientOriginalExtension();
             $nome_arq = $id.'_'.time().'.'.$extensao_arq;
@@ -173,7 +173,7 @@ class PokemonController extends Controller
 
         if(!isset($reg)) { return "<h1>ID: $id não encontrado!"; }
 
-        Storage::delete("public/{$reg->foto}");
+        Storage::delete("public/fotos/pokemons/{$reg->foto}");
 
         $reg->delete();
 

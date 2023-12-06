@@ -112,7 +112,7 @@ class TipoController extends Controller
             $reg->nome = $request->nome;
             $reg->descricao = $request->descricao;
             
-            Storage::delete("public/{$reg->foto}");
+            Storage::delete("public/fotos/tipos/{$reg->foto}");
 
             $extensao_arq = $request->file('foto')->getClientOriginalExtension();
             $nome_arq = $id.'_'.time().'.'.$extensao_arq;
@@ -133,7 +133,7 @@ class TipoController extends Controller
 
         $reg = Tipo::find($id);
 
-        Storage::delete("public/{$reg->foto}");
+        Storage::delete("public/fotos/tipos/{$reg->foto}");
 
         if(!isset($reg)) { return "<h1>ID: $id não encontrado!"; }
 
